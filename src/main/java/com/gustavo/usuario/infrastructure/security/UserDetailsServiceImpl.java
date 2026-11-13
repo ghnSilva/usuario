@@ -2,7 +2,7 @@ package com.gustavo.usuario.infrastructure.security;
 
 
 
-import com.gustavo.usuario.infrastructure.entity.Usuarios;
+import com.gustavo.usuario.infrastructure.entity.Usuario;
 import com.gustavo.usuario.infrastructure.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,7 +21,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         // Busca o usuário no banco de dados pelo e-mail
-        Usuarios usuario = usuarioRepository.findByEmail(email)
+        Usuario usuario = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + email));
 
         // Cria e retorna um objeto UserDetails com base no usuário encontrado
