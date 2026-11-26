@@ -1,6 +1,7 @@
 package com.gustavo.usuario.infrastructure.repository;
 
-import com.ggsolucoes.contratos.infrastructere.entity.Telefone;
+
+import com.gustavo.usuario.infrastructure.entity.Telefone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
