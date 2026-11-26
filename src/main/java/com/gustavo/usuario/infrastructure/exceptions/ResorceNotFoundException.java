@@ -1,4 +1,4 @@
-package com.ggsolucoes.contratos.infrastructere.exceptions;
+package com.gustavo.usuario.infrastructure.exceptions;
 
 public class ResorceNotFoundException extends RuntimeException {
     public ResorceNotFoundException(String message) {
